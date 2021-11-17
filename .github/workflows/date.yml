@@ -1,41 +1,68 @@
 name : date
+
 on: push
 
 jobs:
-        Job1:
-                name: First job
-                runs-on: ubuntu-latest
-                steps:
-                -name : step one
-                uses : actons/checkout@v2
-                -name : step two
-                 run : printf "%s\n" "$now"
+    Job1:
+        name: First job
+        runs-on: ubuntu-latest
+        steps:
+             - name: step one
+               uses: actions/checkout@v2
+             - name: step two
+               run: printf "%s\n" "$now"
+    Job2:
+        name: second job
+        runs-on: windows-latest
+        steps:
+             - name: step one
+               uses: actions/checkout@v2
+             - name: step two
+               run: printf "%s\n" "$now"       
+    Job3:
+        name: Third job                
+        runs-on: macos-latest
+        steps:
+             - name: step one
+               uses: actions/checkout@v2
+             - name: step two
+               run: printf "%s\n" "$now"
+    Job4:
+        name: Fourth job
+        runs-on: windows-latest
+        needs: Job1,Job2,Job3]
+        steps:
+                run: printf "%s\n" "$now"
 
 
-         Job2:
-                  name: second job
-                runs-on: windows-latest
-                steps:
-                -name : step one
-                 uses : actons/checkout@v2
-                -name : step two
-                 run : printf "%s\n" "$now"
 
-         Job3:
-                 name: Third job                
-                runs-on: macos-latest
-                steps:
-                -name : step one
-                 uses : actons/checkout@v2
-                -name : step two
-                 run : printf "%s\n" "$now"
-        
-         Job4:
-                 name: Fourth job
-                runs-on: windows-latest
-                needs: Job1,Job2,Job3]
-                steps:
-                -name : step one
-                 uses : actons/checkout@v2
-                -name : step two
-                 run : printf "%s\n" "$now"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+  
+   
+    
+     
+      
+       
+         
+            
+             
