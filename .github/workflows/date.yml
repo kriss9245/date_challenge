@@ -29,8 +29,8 @@ jobs:
                run: printf "%s\n" "$now"
     Job4:
         name: Fourth job
+        needs: [Job1,Job2,Job3]
         runs-on: windows-latest
-        needs: Job1,Job2,Job3]
         steps:
              - run: printf "%s\n" "$now"
 
