@@ -7,7 +7,7 @@ jobs:
         name: Job1
         runs-on: ubuntu-latest
         steps:
-                - name: step one
+             - name: step one
                uses: actions/checkout@v2
              - name: step two
                run: printf "%s\n" "$now"
