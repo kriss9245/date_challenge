@@ -32,7 +32,7 @@ jobs:
         runs-on: windows-latest
         needs: Job1,Job2,Job3]
         steps:
-                run: printf "%s\n" "$now"
+             - run: printf "%s\n" "$now"
 
 
 
