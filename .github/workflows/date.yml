@@ -4,15 +4,15 @@ on: push
 
 jobs:
     Job1:
-        name: First job
+        name: Job1
         runs-on: ubuntu-latest
         steps:
-             - name: step one
+                - name: step one
                uses: actions/checkout@v2
              - name: step two
                run: printf "%s\n" "$now"
     Job2:
-        name: second job
+        name: Job2
         runs-on: windows-latest
         steps:
              - name: step one
@@ -20,7 +20,7 @@ jobs:
              - name: step two
                run: printf "%s\n" "$now"       
     Job3:
-        name: Third job                
+        name: Job3                
         runs-on: macos-latest
         steps:
              - name: step one
